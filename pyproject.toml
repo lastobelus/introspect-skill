@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "introspect-skill"
+version = "0.1.0"
+description = "A publishable session-introspection skill for T3Code-first users who also touch Codex, Claude, and opencode."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+  {name = "Michael Johnston"}
+]
+keywords = ["ai", "agents", "skill", "session", "logs", "t3code", "codex", "claude", "opencode"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/lastobelus/introspect-skill"
+Repository = "https://github.com/lastobelus/introspect-skill"
+
+[project.scripts]
+introspect-resolve-target = "introspect_skill.cli:resolve_target_main"
+introspect-collect-history = "introspect_skill.cli:collect_introspection_requests_main"
+introspect-thread-context = "introspect_skill.cli:thread_sqlite_main"
+introspect-find-reviewer-session = "introspect_skill.cli:find_reviewer_session_main"
+introspect-provider-log-summary = "introspect_skill.cli:provider_log_summary_main"
+introspect-claude-jsonl-summary = "introspect_skill.cli:claude_jsonl_summary_main"
+introspect-build-bundle = "introspect_skill.cli:build_bundle_main"
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+packages = ["introspect_skill"]
+
+[tool.setuptools.package-data]
+introspect_skill = ["py.typed"]

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Introspect"
+  short_description: "Inspect session state across T3Code and adjacent agent harnesses."
+  default_prompt: "Use $introspect to inspect this thread or another thread's session state, logs, or provider IDs."
+
+policy:
+  allow_implicit_invocation: true
