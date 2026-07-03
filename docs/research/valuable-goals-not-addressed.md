@@ -1,3 +1,14 @@
+---
+revo-d:
+  review:
+    firstReviewedAt: 2026-05-17T20:28:52.016Z
+    lastReviewId: review-mpa85yhw-0wsvmd44
+    lastReviewedAt: 2026-05-17T20:28:52.016Z
+    lastTone: important
+    reviewCount: 1
+tags:
+  - important
+---
 # Valuable Goals Not Currently Addressed
 
 Research date: 2026-05-04.
@@ -117,3 +128,14 @@ Possible scope for this repo:
 - allowlist-based artifact inclusion
 - redaction leakage tests
 
+---
+
+%% revo-d:review-summary:review-mpa85yhw-0wsvmd44 %%
+> [!revo-important] Daily review 2026-05-17 **Important**
+>
+> ### I should review this
+> - often
+>
+> ### I want to use this to
+> - become more efficient at agentic coding
+>
