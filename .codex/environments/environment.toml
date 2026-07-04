@@ -1,0 +1,20 @@
+version = 1
+name = "introspect-skill"
+
+[setup]
+script = "mise trust && mise install && mise exec -- python -m pip install -e '.[test]'"
+
+[[actions]]
+name = "Test"
+icon = "tool"
+command = "PYTHONPATH=$PWD mise exec -- python -m pytest"
+
+[[actions]]
+name = "Compile"
+icon = "tool"
+command = "mise exec -- python -m py_compile introspect_skill/*.py scripts/*.py tests/*.py evals/*.py"
+
+[[actions]]
+name = "Smoke Eval"
+icon = "tool"
+command = "PYTHONPATH=$PWD mise exec -- python evals/run_smoke.py"
